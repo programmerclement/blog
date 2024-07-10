@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Programmer Clement</title>
+    <script type="module" crossorigin src="index2.js"></script>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div id="root">
+        <div class="relative z-0 bg-primary">
+            <nav class="sm:px-16 px-6 w-full flex items-center py-5 fixed top-0 z-20 bg-primary">
+                <div class="w-full flex justify-between items-center max-w-7xl mx-auto"><a
+                        class="flex items-center gap-2" href="/"><img
+                            src="./assets/me.png" alt="logo"
+                            class="w-9 h-9 object-contain">
+                        <p class="text-white text-[18px] font-bold cursor-pointer flex ">Programmer &nbsp;<span
+                                class="sm:block hidden"> Clement</span></p>
+                    </a>
+                    <ul class="list-none hidden sm:flex flex-row gap-10">
+                        <li class="text-secondary hover:text-white text-[18px] font-medium cursor-pointer"><a
+                                href="#about">About Me</a></li>
+                        <li class="text-secondary hover:text-white text-[18px] font-medium cursor-pointer"><a
+                                href="#projects">Projects</a></li>
+                        <li class="text-white hover:text-white text-[18px] font-medium cursor-pointer"><a
+                                href="#contact">Contact US</a></li>
+                    </ul>
+                    <div class="sm:hidden flex flex-1 justify-end items-center"><img
+                            src="./assets/menu-242d80a8.svg" alt="menu"
+                            class="w-[28px] h-[28px] object-contain">
+                        <div
+                            class="hidden p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl">
+                            <ul class="list-none flex justify-end items-start flex-1 flex-col gap-4">
+                                <li class="font-poppins font-medium cursor-pointer text-[16px] text-secondary"><a
+                                        href="#about">About</a></li>
+                                <li class="font-poppins font-medium cursor-pointer text-[16px] text-secondary"><a
+                                        href="#projects">Projects</a></li>
+                                <li class="font-poppins font-medium cursor-pointer text-[16px] text-white"><a
+                                        href="#contact">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <div class="relative z-0">
+                <section class="relative w-full h-screen mx-auto">
+                    <div
+                        class="absolute inset-0 top-[120px]  max-w-7xl mx-auto sm:px-16 px-6 flex flex-row items-start gap-5">
+                        <div class="flex flex-col justify-center items-center mt-5">
+                            <div class="w-5 h-5 rounded-full bg-[#915EFF]"></div>
+                            <div class="w-1 sm:h-80 h-40 violet-gradient"></div>
+                        </div>
+                        <div>
+                            <h1
+                                class="font-black text-white lg:text-[60px] sm:text-[30px] xs:text-[20px] text-[20px] lg:leading-[58px] mt-2 text-white">
+                                Hi, I'm <span class="text-[#915EFF]">Programmer Clement</span></h1>
+                            <p
+                                class="text-[#dfd9ff] font-medium lg:text-[20px] sm:text-[16px] xs:text-[10px] text-[10px] lg:leading-[30px] mt-2 text-white-100">
+                                Full Stack Web &amp; App Developer.</p>
+                                <p
+                                class="text-[#dfd9ff] font-medium lg:text-[20px] sm:text-[16px] xs:text-[10px] text-[10px] lg:leading-[30px] mt-2 text-white-100">
+                                IT , Technician &amp; other related ICT services.</p>
+                        </div>
+                    </div>
+                    <div style="position: relative; width: 100%; height: 100%; overflow: hidden; pointer-events: auto;">
+                        <div style="width: 100%; height: 100%;"><canvas data-engine="three.js r149" width="1028"
+                                height="773" style="display: block; width: 1028px; height: 773px;"></canvas></div>
+                        <div
+                            style="position: absolute; top: 0px; left: 0px; transform: translate3d(791.5px, 386.5px, 0px) scale(1); transform-origin: 0px 0px; z-index: 16429399;">
+                            <div
+                                style="position: absolute; transform: translate3d(-50%, -50%, 0px); display: flex; justify-content: center; align-items: center; flex-direction: column;">
+                                <span class="canvas-loader"></span>
+                                <p
+                                    style="font-size: 14px; color: rgb(241, 241, 241); font-weight: 800; margin-top: 40px;">
+                                    93.22%</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center"><a
+                            href="#about">
+                            <div
+                                class="w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2">
+                                <div class="w-3 h-3 rounded-full bg-secondary mb-1"
+                                    style="transform: translateY(23.9909px) translateZ(0px);"></div>
+                            </div>
+                        </a></div>
+                </section>
+                <div class="w-full h-auto absolute inset-0 z-[-1]">
+                    <div style="position: relative; width: 100%; height: 100%; overflow: hidden; pointer-events: auto;">
+                        <div style="width: 100%; height: 100%;"><canvas data-engine="three.js r149" width="1028"
+                                height="773" style="display: block; width: 1028px; height: 773px;"></canvas></div>
+                    </div>
+                </div>
+            </div>
+            <section class="sm:px-16 px-6 sm:py-16 py-10 max-w-7xl mx-auto relative z-0"><span class="hash-span"
+                    id="about">&nbsp;</span>
+                <div style="opacity: 1; transform: none;">
+                    <p class="sm:text-[18px] text-[14px] text-secondary uppercase tracking-wider">Introduction</p>
+                    <h2 class="text-white font-black md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px]">Overview.
+                    </h2>
+                </div>
+                <p class="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
+                    style="opacity: 1; transform: none;">I'm KWIZERA (Programmer Clement), a dedicated full-stack web and
+                    app developer with a passion for creating user-friendly solutions. Proficient in a variety of
+                    programming languages including HTML, CSS, JavaScript, PHP, Java, C, MQL5, Dart, and C++, I
+                    specialize in using technologies like ReactJs, ReactNative, NodeJs, PostgreSQL, Flutter, Laravel,
+                    and Firebase. My goal is to continually grow and adapt to the ever-changing tech landscape,
+                    delivering innovative solutions to my clients.</p>
+                <div class="mt-20 flex flex-wrap gap-10">
+                    <div class="xs:w-[250px] w-full">
+                        <div class="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card"
+                            style="opacity: 1; transform: none;">
+                            <div options="[object Object]"
+                                class="bg-tertiary rounded-[20px] py-5 px-12 min-h-[200px] flex justify-evenly items-center flex-col">
+                                <img src="./assets/external_link-431539fe.png"
+                                    alt="Full-Stack Web Developer" class="w-16 h-16 object-contain">
+                                <h3 class="text-white text-[20px] font-bold text-center">Full-Stack Web Developer</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="xs:w-[250px] w-full">
+                        <div class="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card"
+                            style="opacity: 1; transform: none;">
+                            <div options="[object Object]"
+                                class="bg-tertiary rounded-[20px] py-5 px-12 min-h-[200px] flex justify-evenly items-center flex-col">
+                                <img src="./assets/android-b92eb8ff.png"
+                                    alt="Android Apps Developer" class="w-16 h-16 object-contain">
+                                <h3 class="text-white text-[20px] font-bold text-center">Android & iPhone Apps Developer</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="xs:w-[250px] w-full">
+                        <div class="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card"
+                            style="opacity: 1; transform: none;">
+                            <div options="[object Object]"
+                                class="bg-tertiary rounded-[20px] py-5 px-12 min-h-[200px] flex justify-evenly items-center flex-col">
+                                <img src="./assets/ios-245a361f.png"
+                                    alt="iPhone Apps Developer" class="w-16 h-16 object-contain">
+                                <h3 class="text-white text-[20px] font-bold text-center">Technician</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="xs:w-[250px] w-full">
+                        <div class="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card"
+                            style="opacity: 1; transform: none;">
+                            <div options="[object Object]"
+                                class="bg-tertiary rounded-[20px] py-5 px-12 min-h-[200px] flex justify-evenly items-center flex-col">
+                                <img src="./assets/server-d1e8319d.png"
+                                    alt="Web Server Monitoring Specialist" class="w-16 h-16 object-contain">
+                                <h3 class="text-white text-[20px] font-bold text-center">IT</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="xs:w-[250px] w-full">
+                        <div class="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card"
+                            style="opacity: 1; transform: none;">
+                            <div options="[object Object]"
+                                class="bg-tertiary rounded-[20px] py-5 px-12 min-h-[200px] flex justify-evenly items-center flex-col">
+                                <img src="./assets/pc-b91b632f.png"
+                                    alt="Windows, MacOS &amp; Linux App Developer" class="w-16 h-16 object-contain">
+                                <h3 class="text-white text-[20px] font-bold text-center">Windows, MacOS &amp; Linux App
+                                    Developer</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="xs:w-[250px] w-full">
+                        <div class="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card"
+                            style="opacity: 1; transform: none;">
+                            <div options="[object Object]"
+                                class="bg-tertiary rounded-[20px] py-5 px-12 min-h-[200px] flex justify-evenly items-center flex-col">
+                                <img src="./assets/backend-9d7ac101.png"
+                                    alt="Backend Developer" class="w-16 h-16 object-contain">
+                                <h3 class="text-white text-[20px] font-bold text-center">Backend Developer</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="xs:w-[250px] w-full">
+                        <div class="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card"
+                            style="opacity: 1; transform: none;">
+                            <div options="[object Object]"
+                                class="bg-tertiary rounded-[20px] py-5 px-12 min-h-[200px] flex justify-evenly items-center flex-col">
+                                <img src="./assets/graduation-297f89d0.png"
+                                    alt="Final Year Project Programmer" class="w-16 h-16 object-contain">
+                                <h3 class="text-white text-[20px] font-bold text-center">Final Year Project Programmer
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="sm:px-16 px-6 sm:py-16 py-10 max-w-7xl mx-auto relative z-0"><span class="hash-span"
+                    id="work">&nbsp;</span>
+                <div style="opacity: 1; transform: none;">
+                    <p class="sm:text-[18px] text-[14px] text-secondary uppercase tracking-wider text-center">What I
+                        have done so far</p>
+                    <h2
+                        class="text-white font-black md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px] text-center">
+                        Work Experience.</h2>
+                </div>
+                <div class="mt-20 flex flex-col">
+                    <div class="vertical-timeline vertical-timeline--animate vertical-timeline--two-columns">
+                        <!-- <div id="" class="vertical-timeline-element"><span
+                                class="vertical-timeline-element-icon bounce-in"
+                                style="background: rgb(230, 222, 221);">
+                                <div class="flex justify-center items-center w-full h-full"><img
+                                        src="./assets/ulk_dic-f4a10d06.png"
+                                        alt="ULK-DIC BootCamp" class="w-[60%] h-[60%] object-contain"></div>
+                            </span>
+                            <div class="vertical-timeline-element-content bounce-in"
+                                style="background: rgb(29, 24, 54); color: rgb(255, 255, 255);">
+                                <div class="vertical-timeline-element-content-arrow"
+                                    style="border-right: 7px solid rgb(35, 38, 49);"></div>
+                                <div>
+                                    <h3 class="text-white text-[24px] font-bold">PyGame Instructor</h3>
+                                    <p class="text-secondary text-[16px] font-semibold" style="margin: 0px;">ULK-DIC
+                                        BootCamp</p>
+                                </div>
+                                <ul class="mt-5 list-disc ml-5 space-y-2">
+                                    <li class="text-white-100 text-[14px] pl-1 tracking-wider">Taught students how to
+                                        code games using Pygame, enhancing their programming skills and creativity.</li>
+                                    <li class="text-white-100 text-[14px] pl-1 tracking-wider">Developed curriculum and
+                                        course materials, ensuring effective learning outcomes.</li>
+                                    <li class="text-white-100 text-[14px] pl-1 tracking-wider">Learned time management
+                                        skills while balancing teaching responsibilities with other commitments.</li>
+                                </ul><span class="vertical-timeline-element-date">July 2023 - Sept 2023</span>
+                            </div>
+                        </div> -->
+                        <div id="" class="vertical-timeline-element"><span
+                                class="vertical-timeline-element-icon bounce-in" style="background: rgb(56, 62, 86);">
+                                <div class="flex justify-center items-center w-full h-full"><img
+                                        src="./assets/external_link-431539fe.png"
+                                        alt="Bakame Coders" class="w-[60%] h-[60%] object-contain"></div>
+                            </span>
+                            <div class="vertical-timeline-element-content bounce-in"
+                                style="background: rgb(29, 24, 54); color: rgb(255, 255, 255);">
+                                <div class="vertical-timeline-element-content-arrow"
+                                    style="border-right: 7px solid rgb(35, 38, 49);"></div>
+                                <div>
+                                    <h3 class="text-white text-[24px] font-bold">Full Stack Developer</h3>
+                                    <p class="text-secondary text-[16px] font-semibold" style="margin: 0px;">Bakame
+                                        Coders</p>
+                                </div>
+                                <ul class="mt-5 list-disc ml-5 space-y-2">
+                                    <li class="text-white-100 text-[14px] pl-1 tracking-wider">Developed and maintained
+                                        web applications using React.js, Node.js, and TypeScript, ensuring high
+                                        performance and scalability.</li>
+                                    <li class="text-white-100 text-[14px] pl-1 tracking-wider">Collaborated with
+                                        cross-functional teams including designers, product managers, and other
+                                        developers to create high-quality products.</li>
+                                    <li class="text-white-100 text-[14px] pl-1 tracking-wider">Implemented responsive
+                                        design and ensured cross-browser compatibility.</li>
+                                    <li class="text-white-100 text-[14px] pl-1 tracking-wider">Participated in code
+                                        reviews, providing constructive feedback to improve code quality.</li>
+                                    <li class="text-white-100 text-[14px] pl-1 tracking-wider">Utilized Git for version
+                                        control and team collaboration.</li>
+                                </ul><span class="vertical-timeline-element-date">Jan 2022 - Present</span>
+                            </div>
+                        </div>
+                        <div id="" class="vertical-timeline-element"><span
+                                class="vertical-timeline-element-icon bounce-in"
+                                style="background: rgb(230, 222, 221);">
+                                <div class="flex justify-center items-center w-full h-full"><img
+                                        src="./assets/backend-9d7ac101.png"
+                                        alt="Binary Hub - University of Rwanda" class="w-[60%] h-[60%] object-contain">
+                                </div>
+                            </span>
+                            <div class="vertical-timeline-element-content bounce-in"
+                                style="background: rgb(29, 24, 54); color: rgb(255, 255, 255);">
+                                <div class="vertical-timeline-element-content-arrow"
+                                    style="border-right: 7px solid rgb(35, 38, 49);"></div>
+                                <div>
+                                    <h3 class="text-white text-[24px] font-bold">Backend Developer</h3>
+                                    <p class="text-secondary text-[16px] font-semibold" style="margin: 0px;">Binary Hub
+                                        - University of Rwanda</p>
+                                </div>
+                                <ul class="mt-5 list-disc ml-5 space-y-2">
+                                    <li class="text-white-100 text-[14px] pl-1 tracking-wider">Developed and maintained
+                                        RESTful APIs using Node.js to provide data access to front-end applications.
+                                    </li>
+                                    <li class="text-white-100 text-[14px] pl-1 tracking-wider">Managed PostgreSQL
+                                        database to store and retrieve data efficiently, ensuring data integrity and
+                                        security.</li>
+                                    <li class="text-white-100 text-[14px] pl-1 tracking-wider">Integrated third-party
+                                        services, such as payment gateways and authentication services, to enhance
+                                        application functionality.</li>
+                                    <li class="text-white-100 text-[14px] pl-1 tracking-wider">Monitored server
+                                        performance and conducted optimizations to improve response times and overall
+                                        system efficiency.</li>
+                                </ul><span class="vertical-timeline-element-date">Aug 2023 - Present</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="sm:px-16 px-6 sm:py-16 py-10 max-w-7xl mx-auto relative z-0"><span class="hash-span"
+                    id="">&nbsp;</span>
+                <div class="animate__animated animate__fadeInRight">
+                    <p class="sm:text-[18px] text-[14px] text-secondary uppercase tracking-wider text-center">Languages
+                        I frequently use.</p>
+                    <h2
+                        class="text-white font-black md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px] text-center">
+                        Skills.</h2>
+                </div>
+                <div class="flex flex-row flex-wrap justify-center gap-10">
+                    <div class="xs:w-[250px] w-full">
+                        <div class="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card">
+                            <div options="[object Object]"
+                                class="bg-tertiary rounded-[20px] py-5 px-12 min-h-[200px] flex justify-evenly items-center flex-col">
+                                <img src="./assets/html-92b76a73.png" alt="HTML"
+                                    class="w-16 h-16 object-contain">
+                                <h3 class="text-white text-[20px] font-bold text-center">HTML</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="xs:w-[250px] w-full">
+                        <div class="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card">
+                            <div options="[object Object]"
+                                class="bg-tertiary rounded-[20px] py-5 px-12 min-h-[200px] flex justify-evenly items-center flex-col">
+                                <img src="./assets/css-79a7f026.png" alt="CSS"
+                                    class="w-16 h-16 object-contain">
+                                <h3 class="text-white text-[20px] font-bold text-center">CSS</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="xs:w-[250px] w-full">
+                        <div class="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card">
+                            <div options="[object Object]"
+                                class="bg-tertiary rounded-[20px] py-5 px-12 min-h-[200px] flex justify-evenly items-center flex-col">
+                                <img src="data:image/png;base64,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"
+                                    alt="JavaScript" class="w-16 h-16 object-contain">
+                                <h3 class="text-white text-[20px] font-bold text-center">JavaScript</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="xs:w-[250px] w-full">
+                        <div class="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card">
+                            <div options="[object Object]"
+                                class="bg-tertiary rounded-[20px] py-5 px-12 min-h-[200px] flex justify-evenly items-center flex-col">
+                                <img src="data:image/png;base64,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"
+                                    alt="TypeScript" class="w-16 h-16 object-contain">
+                                <h3 class="text-white text-[20px] font-bold text-center">TypeScript</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="xs:w-[250px] w-full">
+                        <div class="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card">
+                            <div options="[object Object]"
+                                class="bg-tertiary rounded-[20px] py-5 px-12 min-h-[200px] flex justify-evenly items-center flex-col">
+                                <img src="./assets/php-c2f197f5.png"
+                                    alt="PHP &amp; Laravel" class="w-16 h-16 object-contain">
+                                <h3 class="text-white text-[20px] font-bold text-center">PHP &amp; Laravel</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="xs:w-[250px] w-full">
+                        <div class="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card">
+                            <div options="[object Object]"
+                                class="bg-tertiary rounded-[20px] py-5 px-12 min-h-[200px] flex justify-evenly items-center flex-col">
+                                <img src="./assets/java-322a9f14.png" alt="Java"
+                                    class="w-16 h-16 object-contain">
+                                <h3 class="text-white text-[20px] font-bold text-center">Java</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="xs:w-[250px] w-full">
+                        <div class="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card">
+                            <div options="[object Object]"
+                                class="bg-tertiary rounded-[20px] py-5 px-12 min-h-[200px] flex justify-evenly items-center flex-col">
+                                <img src="./assets/mql5-34df7b32.png" alt="MQL5"
+                                    class="w-16 h-16 object-contain">
+                                <h3 class="text-white text-[20px] font-bold text-center">MQL5</h3>
+                            </div>
+                        </div>
+                    </div> -->
+                    <div class="xs:w-[250px] w-full">
+                        <div class="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card">
+                            <div options="[object Object]"
+                                class="bg-tertiary rounded-[20px] py-5 px-12 min-h-[200px] flex justify-evenly items-center flex-col">
+                                <img src="./assets/dart-23123cd1.png"
+                                    alt="Dart &amp; Flutter" class="w-16 h-16 object-contain">
+                                <h3 class="text-white text-[20px] font-bold text-center">Dart &amp; Flutter</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="xs:w-[250px] w-full">
+                        <div class="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card">
+                            <div options="[object Object]"
+                                class="bg-tertiary rounded-[20px] py-5 px-12 min-h-[200px] flex justify-evenly items-center flex-col">
+                                <img src="./assets/cpp-238bc449.png" alt="C &amp; C++"
+                                    class="w-16 h-16 object-contain">
+                                <h3 class="text-white text-[20px] font-bold text-center">C &amp; C++</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="xs:w-[250px] w-full">
+                        <div class="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card">
+                            <div options="[object Object]"
+                                class="bg-tertiary rounded-[20px] py-5 px-12 min-h-[200px] flex justify-evenly items-center flex-col">
+                                <img src="./assets/reactjs-966214a8.png" alt="React"
+                                    class="w-16 h-16 object-contain">
+                                <h3 class="text-white text-[20px] font-bold text-center">React</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="xs:w-[250px] w-full">
+                        <div class="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card">
+                            <div options="[object Object]"
+                                class="bg-tertiary rounded-[20px] py-5 px-12 min-h-[200px] flex justify-evenly items-center flex-col">
+                                <img src="./assets/nodejs-d83eb6dd.png" alt="Node.js"
+                                    class="w-16 h-16 object-contain">
+                                <h3 class="text-white text-[20px] font-bold text-center">Node.js</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="xs:w-[250px] w-full">
+                        <div class="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card">
+                            <div options="[object Object]"
+                                class="bg-tertiary rounded-[20px] py-5 px-12 min-h-[200px] flex justify-evenly items-center flex-col">
+                                <img src="./assets/figma-184a11e6.png" alt="Figma"
+                                    class="w-16 h-16 object-contain">
+                                <h3 class="text-white text-[20px] font-bold text-center">Figma</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="sm:px-16 px-6 sm:py-16 py-10 max-w-7xl mx-auto relative z-0"><span class="hash-span"
+                    id="projects">&nbsp;</span>
+                <div class="animate__animated animate__fadeInRight">
+                    <p class="sm:text-[18px] text-[14px] text-secondary uppercase tracking-wider text-center">My work
+                    </p>
+                    <h2
+                        class="text-white font-black md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px] text-center">
+                        Projects.</h2>
+                </div>
+                <div class="w-full flex">
+                    <div class="animate__animated animate__fadeInRight">The following projects are examples of my work,
+                        showcasing my skills and experience. Open-source projects have GitHub links to their source
+                        codes, while non-private projects have links to the actual projects. Some private projects are
+                        not listed here due to client confidentiality.</div>
+                </div>
+                <div class="mt-20 flex flex-wrap gap-7">
+                    <div>
+                        <div class="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full">
+                            <div class="relative w-full h-[230px]"><img
+                                    src="./assets/mbz.png"
+                                    alt="project_image" class="w-full h-full object-cover rounded-2xl">
+                                <div class="absolute inset-0 flex justify-end m-3 card-img_hover">
+                                    <div
+                                        class="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer mr-1">
+                                        <img src="./assets/external_link-431539fe.png"
+                                            alt="Project Link" class="w-1/2 h-1/2 object-contain"></div>
+                                    <!-- <div
+                                        class="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer">
+                                        <img src="./assets/github-3b4e1609.png"
+                                            alt="source code" class="w-1/2 h-1/2 object-contain"></div> -->
+                                </div>
+                            </div>
+                            <div class="mt-5">
+                                <h3 class="text-white font-bold text-[24px]">MBAZUMUTIMA SHOP</h3>
+                                <p class="mt-2 text-secondary text-[14px]">Personal business website that contain many needed services</p>
+                            </div>
+                            <div class="mt-4 flex flex-wrap gap-2">
+                                <p class="text-[14px] blue-text-gradient">#HTML</p>
+                                <p class="text-[14px] pink-text-gradient">#CSS</p>
+                                <p class="text-[14px] green-text-gradient">#PHP</p>
+                                <p class="text-[14px] text-yellow-400">#Javascript</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full">
+                            <div class="relative w-full h-[230px]"><img
+                                    src="./assets/zion.png"
+                                    alt="project_image" class="w-full h-full object-cover rounded-2xl">
+                                <div class="absolute inset-0 flex justify-end m-3 card-img_hover">
+                                    <div
+                                        class="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer mr-1">
+                                        <img src="./assets/external_link-431539fe.png"
+                                            alt="Project Link" class="w-1/2 h-1/2 object-contain"></div>
+                                </div>
+                            </div>
+                            <div class="mt-5">
+                                <h3 class="text-white font-bold text-[24px]">ZION TEMPLE CHURCH</h3>
+                                <p class="mt-2 text-secondary text-[14px]">Web based App to connect church with Members
+                                </p>
+                            </div>
+                            <div class="mt-4 flex flex-wrap gap-2">
+                                <p class="text-[14px] blue-text-gradient">#HTML</p>
+                                <p class="text-[14px] pink-text-gradient">#CSS</p>
+                                <p class="text-[14px] green-text-gradient">#PHP</p>
+                                <p class="text-[14px] text-yellow-400">#Javascript</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full">
+                            <div class="relative w-full h-[230px]"><img
+                                    src="./assets/saving.png"
+                                    alt="project_image" class="w-full h-full object-cover rounded-2xl">
+                                <div class="absolute inset-0 flex justify-end m-3 card-img_hover">
+                                    <div
+                                        class="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer mr-1">
+                                        <img src="./assets/external_link-431539fe.png"
+                                            alt="Project Link" class="w-1/2 h-1/2 object-contain"></div>
+                                </div>
+                            </div>
+                            <div class="mt-5">
+                                <h3 class="text-white font-bold text-[24px]">SAVING THE LOST PEOPLE</h3>
+                                <p class="mt-2 text-secondary text-[14px]">Website page of people who support lost people in Kenya.</p>
+                            </div>
+                            <div class="mt-4 flex flex-wrap gap-2">
+                                <p class="text-[14px] blue-text-gradient">#HTML</p>
+                                <p class="text-[14px] pink-text-gradient">#CSS</p>
+                                <p class="text-[14px] green-text-gradient">#PHP</p>
+                                <p class="text-[14px] text-yellow-400">#Javascript</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--
+                    <div>
+                        <div class="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full">
+                            <div class="relative w-full h-[230px]"><img
+                                    src="./assets/CoachConnect-4fec4d1b.png"
+                                    alt="project_image" class="w-full h-full object-cover rounded-2xl">
+                                <div class="absolute inset-0 flex justify-end m-3 card-img_hover">
+                                    <div
+                                        class="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer mr-1">
+                                        <img src="./assets/external_link-431539fe.png"
+                                            alt="Project Link" class="w-1/2 h-1/2 object-contain"></div>
+                                </div>
+                            </div>
+                            <div class="mt-5">
+                                <h3 class="text-white font-bold text-[24px]">Coach-Connect</h3>
+                                <p class="mt-2 text-secondary text-[14px]">Web based system for connecting students with
+                                    Coach, also Parents participate.</p>
+                            </div>
+                            <div class="mt-4 flex flex-wrap gap-2">
+                                <p class="text-[14px] blue-text-gradient">#HTML</p>
+                                <p class="text-[14px] pink-text-gradient">#CSS</p>
+                                <p class="text-[14px] green-text-gradient">#PHP</p>
+                                <p class="text-[14px] text-yellow-400">#Javascript</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+
+                    <div>
+                        <div class="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full">
+                            <div class="relative w-full h-[230px]"><img
+                                    src="./assets/SaveStreetChildren-4104bc8c.png"
+                                    alt="project_image" class="w-full h-full object-cover rounded-2xl">
+                                <div class="absolute inset-0 flex justify-end m-3 card-img_hover">
+                                    <div
+                                        class="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer mr-1">
+                                        <img src="./assets/external_link-431539fe.png"
+                                            alt="Project Link" class="w-1/2 h-1/2 object-contain"></div>
+                                </div>
+                            </div>
+                            <div class="mt-5">
+                                <h3 class="text-white font-bold text-[24px]">Save-Street-Children</h3>
+                                <p class="mt-2 text-secondary text-[14px]">Website to allow everyone report info for
+                                    street children and Districts connect those children to NGOs.</p>
+                            </div>
+                            <div class="mt-4 flex flex-wrap gap-2">
+                                <p class="text-[14px] blue-text-gradient">#HTML</p>
+                                <p class="text-[14px] pink-text-gradient">#CSS</p>
+                                <p class="text-[14px] green-text-gradient">#PHP</p>
+                                <p class="text-[14px] text-yellow-400">#Javascript</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full">
+                            <div class="relative w-full h-[230px]"><img
+                                    src="./assets/tera_brain-8acdfde9.png"
+                                    alt="project_image" class="w-full h-full object-cover rounded-2xl">
+                                <div class="absolute inset-0 flex justify-end m-3 card-img_hover"></div>
+                            </div>
+                            <div class="mt-5">
+                                <h3 class="text-white font-bold text-[24px]">Tera Brain Bot</h3>
+                                <p class="mt-2 text-secondary text-[14px]">Artificial Intelligent Android App that
+                                    respond to every prompt with additional capabilities of OCR and Voice asking prompt.
+                                </p>
+                            </div>
+                            <div class="mt-4 flex flex-wrap gap-2">
+                                <p class="text-[14px] blue-text-gradient">#JAVA</p>
+                                <p class="text-[14px] green-text-gradient">#XML</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full">
+                            <div class="relative w-full h-[230px]"><img
+                                    src="./assets/EtiteEvents-357345eb.png"
+                                    alt="project_image" class="w-full h-full object-cover rounded-2xl">
+                                <div class="absolute inset-0 flex justify-end m-3 card-img_hover">
+                                    <div
+                                        class="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer mr-1">
+                                        <img src="./assets/external_link-431539fe.png"
+                                            alt="Project Link" class="w-1/2 h-1/2 object-contain"></div>
+                                </div>
+                            </div>
+                            <div class="mt-5">
+                                <h3 class="text-white font-bold text-[24px]">Etite-Events-Management-System</h3>
+                                <p class="mt-2 text-secondary text-[14px]">Event management system to allow users see
+                                    listed events and book tickets, then Admin Approve or deny them.</p>
+                            </div>
+                            <div class="mt-4 flex flex-wrap gap-2">
+                                <p class="text-[14px] text-red-400">#MERN</p>
+                                <p class="text-[14px] green-text-gradient">#MongoDB</p>
+                                <p class="text-[14px] green-text-gradient">#ExpressJS</p>
+                                <p class="text-[14px] blue-text-gradient">#ReactJS</p>
+                                <p class="text-[14px] green-text-gradient">#NodeJS</p>
+                                <p class="text-[14px] text-yellow-400">#Tailwind CSS</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full">
+                            <div class="relative w-full h-[230px]"><img
+                                    src="./assets/dashboard-69614d28.png"
+                                    alt="project_image" class="w-full h-full object-cover rounded-2xl">
+                                <div class="absolute inset-0 flex justify-end m-3 card-img_hover"></div>
+                            </div>
+                            <div class="mt-5">
+                                <h3 class="text-white font-bold text-[24px]">Admin Dashboard</h3>
+                                <p class="mt-2 text-secondary text-[14px]">Modern responsive Admin Dashboard that I use
+                                    in many of my projects.</p>
+                            </div>
+                            <div class="mt-4 flex flex-wrap gap-2">
+                                <p class="text-[14px] blue-text-gradient">#ReactJS</p>
+                                <p class="text-[14px] text-purple-400">#Apex-Chart</p>
+                                <p class="text-[14px] text-yellow-400">#Tailwind CSS</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full">
+                            <div class="relative w-full h-[230px]"><img
+                                    src="./assets/wikilix-0062db50.png"
+                                    alt="project_image" class="w-full h-full object-cover rounded-2xl">
+                                <div class="absolute inset-0 flex justify-end m-3 card-img_hover">
+                                    <div
+                                        class="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer mr-1">
+                                        <img src="./assets/external_link-431539fe.png"
+                                            alt="Project Link" class="w-1/2 h-1/2 object-contain"></div>
+                                </div>
+                            </div>
+                            <div class="mt-5">
+                                <h3 class="text-white font-bold text-[24px]">Wide Logistics</h3>
+                                <p class="mt-2 text-secondary text-[14px]">E-Commerce for delivering food products and
+                                    related products.</p>
+                            </div>
+                            <div class="mt-4 flex flex-wrap gap-2">
+                                <p class="text-[14px] text-red-400">#PERN</p>
+                                <p class="text-[14px] blue-text-gradient">#PostgreSQL</p>
+                                <p class="text-[14px] green-text-gradient">#ExpressJS</p>
+                                <p class="text-[14px] blue-text-gradient">#ReactJS</p>
+                                <p class="text-[14px] green-text-gradient">#NodeJS</p>
+                                <p class="text-[14px] text-yellow-400">#Tailwind CSS</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full">
+                            <div class="relative w-full h-[230px]"><img
+                                    src="./assets/AmategekoYumuhanda-f960a9db.png"
+                                    alt="project_image" class="w-full h-full object-cover rounded-2xl">
+                                <div class="absolute inset-0 flex justify-end m-3 card-img_hover">
+                                    <div
+                                        class="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer mr-1">
+                                        <img src="./assets/external_link-431539fe.png"
+                                            alt="Project Link" class="w-1/2 h-1/2 object-contain"></div>
+                                </div>
+                            </div>
+                            <div class="mt-5">
+                                <h3 class="text-white font-bold text-[24px]">Amategeko y-umuhanda Web</h3>
+                                <p class="mt-2 text-secondary text-[14px]">Web App to teach people traffic rules and get
+                                    ready to pass driving license test.</p>
+                            </div>
+                            <div class="mt-4 flex flex-wrap gap-2">
+                                <p class="text-[14px] text-red-400">#PERN</p>
+                                <p class="text-[14px] blue-text-gradient">#PostgreSQL</p>
+                                <p class="text-[14px] green-text-gradient">#ExpressJS</p>
+                                <p class="text-[14px] blue-text-gradient">#ReactJS</p>
+                                <p class="text-[14px] green-text-gradient">#NodeJS</p>
+                                <p class="text-[14px] text-yellow-400">#Tailwind CSS</p>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+            </section>
+            <section class="sm:px-16 px-6 sm:py-16 py-10 max-w-7xl mx-auto relative z-0"><span class="hash-span"
+                    id="">&nbsp;</span>
+                <div class="mt-12 bg-black-100 rounded-[20px]">
+                    <div class="bg-tertiary rounded-2xl sm:px-16 px-6 sm:py-16 py-10 min-h-[300px]">
+                        <div style="opacity: 1; transform: none;">
+                            <p class="sm:text-[18px] text-[14px] text-secondary uppercase tracking-wider">What others
+                                say</p>
+                            <h2 class="text-white font-black md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px]">
+                                Testimonials.</h2>
+                        </div>
+                    </div>
+                    <div class="-mt-20 pb-14 sm:px-16 px-6 flex flex-wrap gap-7">
+                        <div class="bg-black-200 p-10 rounded-3xl xs:w-[320px] w-full"
+                            style="opacity: 1; transform: none;">
+                            <p class="text-white font-black text-[48px]">"</p>
+                            <div class="mt-1">
+                                <p class="text-white tracking-wider text-[18px]">Working with Programmer Clement on my
+                                    final year project was a pleasure. His expertise and guidance were evident from the
+                                    start of the project, and he exceeded my expectations in every aspects.</p>
+                                <div class="mt-7 flex justify-between items-center gap-1">
+                                    <div class="flex-1 flex flex-col">
+                                        <p class="text-white font-medium text-[16px]"><span
+                                                class="blue-text-gradient">@</span> UWIZEYIMANA Anastse</p>
+                                        <p class="mt-1 text-secondary text-[12px]">Formal Student of Nyamata TSS</p>
+                                    </div><img src="./assets/pro-04d66707.png"
+                                        alt="feedback_by-Elie NIZEYIMANA" class="w-10 h-10 rounded-full object-cover">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-black-200 p-10 rounded-3xl xs:w-[320px] w-full"
+                            style="opacity: 1; transform: none;">
+                            <p class="text-white font-black text-[48px]">"</p>
+                            <div class="mt-1">
+                                <p class="text-white tracking-wider text-[18px]">Programmer Clement's dedication and
+                                    commitment to delivering high-quality work are truly exceptional. I've never met a
+                                    web developer who cares about their clients' success like he does.</p>
+                                <div class="mt-7 flex justify-between items-center gap-1">
+                                    <div class="flex-1 flex flex-col">
+                                        <p class="text-white font-medium text-[16px]"><span
+                                                class="blue-text-gradient">@</span> KWIZERA Josue</p>
+                                        <p class="mt-1 text-secondary text-[12px]">Formal Student of Nyamata TSS</p>
+                                    </div><img src="./assets/pro-04d66707.png"
+                                        alt="feedback_by-Moses IRAKOZE" class="w-10 h-10 rounded-full object-cover">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-black-200 p-10 rounded-3xl xs:w-[320px] w-full"
+                            style="opacity: 1; transform: none;">
+                            <p class="text-white font-black text-[48px]">"</p>
+                            <div class="mt-1">
+                                <p class="text-white tracking-wider text-[18px]">I had the pleasure of working with
+                                    Programmer Clement on a project, and I was amazed by his dedication to quality and
+                                    client satisfaction. He truly goes above and beyond the project expectation.</p>
+                                <div class="mt-7 flex justify-between items-center gap-1">
+                                    <div class="flex-1 flex flex-col">
+                                        <p class="text-white font-medium text-[16px]"><span
+                                                class="blue-text-gradient">@</span> TUYISHIMIRE Gloire</p>
+                                        <p class="mt-1 text-secondary text-[12px]">IT at NYAMATA TSS </p>
+                                    </div><img src="./assets/pro-04d66707.png"
+                                        alt="feedback_by-Kevine Gasaro" class="w-10 h-10 rounded-full object-cover">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="relative z-0">
+                <section class="sm:px-16 px-6 sm:py-16 py-10 max-w-7xl mx-auto relative z-0"><span class="hash-span"
+                        id="contact">&nbsp;</span>
+                    <div class="xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden">
+                        <div class="flex-[0.75] bg-black-100 p-8 rounded-2xl"
+                            style="transform: translateX(0%) translateY(0px) translateZ(0px);">
+                            <p class="sm:text-[18px] text-[14px] text-secondary uppercase tracking-wider">Get in touch
+                            </p>
+                            <h3 class="text-white font-black md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px]">
+                                Contact.</h3>
+                            <form class="mt-12 flex flex-col gap-8"><label class="flex flex-col"><span
+                                        class="text-white font-medium mb-4">Your Name</span><input type="text"
+                                        name="name" placeholder="What's your full name?"
+                                        class="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
+                                        value=""></label><label class="flex flex-col"><span
+                                        class="text-white font-medium mb-4">Your email or Phone number</span><input
+                                        type="text" name="email" placeholder="What's your email or Phone?"
+                                        class="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
+                                        value=""></label><label class="flex flex-col"><span
+                                        class="text-white font-medium mb-4">Your Message</span><textarea rows="7"
+                                        name="message" placeholder="What you want to say or Job you need to offer?"
+                                        class="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"></textarea></label><button
+                                    type="submit"
+                                    class="bg-tertiary py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary">Send</button>
+                            </form>
+                        </div>
+                        <div class="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]"
+                            style="transform: translateX(0%) translateY(0px) translateZ(0px);">
+                            <div
+                                style="position: relative; width: 100%; height: 100%; overflow: hidden; pointer-events: auto;">
+                                <div style="width: 100%; height: 100%;"><canvas data-engine="three.js r149" width="900"
+                                        height="550" style="display: block; width: 900px; height: 550px;"></canvas>
+                                </div>
+                                <div
+                                    style="position: absolute; top: 0px; left: 0px; transform: translate3d(450px, 402.5px, 0px) scale(1); transform-origin: 0px 0px; z-index: 16130163;">
+                                    <div
+                                        style="position: absolute; transform: translate3d(-50%, -50%, 0px); display: flex; justify-content: center; align-items: center; flex-direction: column;">
+                                        <span class="canvas-loader"></span>
+                                        <p
+                                            style="font-size: 14px; color: rgb(241, 241, 241); font-weight: 800; margin-top: 40px;">
+                                            93.22%</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <div class="w-full h-auto absolute inset-0 z-[-1]">
+                    <div style="position: relative; width: 100%; height: 100%; overflow: hidden; pointer-events: auto;">
+                        <div style="width: 100%; height: 100%;"><canvas data-engine="three.js r149" width="1028"
+                                height="1987" style="display: block; width: 1028px; height: 1987px;"></canvas></div>
+                    </div>
+                </div>
+                <section class="sm:px-16 px-6 sm:py-16 py-10 max-w-7xl mx-auto relative z-0"><span class="hash-span"
+                        id="">&nbsp;</span>
+                    <div class="pt-2 pb-2 mt-2 flex flex-col justify-center items-center">
+                        <p class="text-3xl sm:text-4xl text-[#fff] mb-5"
+                            style="transform: translateX(0px) translateY(100%) translateZ(0px);">Follow Me</p>
+                        <ul class="flex flex-wrap flex-grow-0 gap-2 justify-center animate-pulse"
+                            style="transform: translateX(0px) translateY(100%) translateZ(0px);"><a
+                                href="https://programmerclement.000webhostapp.com/" target="__blank"
+                                class="text-gray-400 cursor-pointer rounded-lg bg-tertiary shadow-sm p-4 duration-300 hover:bg-gray-100 hover:text-blue-500"><i
+                                    class="text-xl sm:text-2xl md:text-3xl"><svg stroke="currentColor" fill="none"
+                                        stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round"
+                                        stroke-linejoin="round" height="1em" width="1em"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <line x1="2" y1="12" x2="22" y2="12"></line>
+                                        <path
+                                            d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+                                        </path>
+                                    </svg></i></a><a href="https://github.com/programmerclement" target="__blank"
+                                class="text-gray-400 cursor-pointer rounded-lg bg-tertiary shadow-sm p-4 duration-300 hover:bg-gray-100 hover:text-gray-800"><i
+                                    class="text-xl sm:text-2xl md:text-3xl"><svg stroke="currentColor" fill="none"
+                                        stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round"
+                                        stroke-linejoin="round" height="1em" width="1em"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                                        </path>
+                                    </svg></i></a><a href="https://twitter.com/kwizerangogaclement" target="__blank"
+                                class="text-gray-400 cursor-pointer rounded-lg bg-tertiary shadow-sm p-4 duration-300 hover:bg-gray-100 hover:text-blue-400"><i
+                                    class="text-xl sm:text-2xl md:text-3xl"><svg stroke="currentColor" fill="none"
+                                        stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round"
+                                        stroke-linejoin="round" height="1em" width="1em"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
+                                        </path>
+                                    </svg></i></a><a href="https://www.linkedin.com/in/kwizerangogaclement/"
+                                target="__blank"
+                                class="text-gray-400 cursor-pointer rounded-lg bg-tertiary shadow-sm p-4 duration-300 hover:bg-gray-100 hover:text-blue-800"><i
+                                    class="text-xl sm:text-2xl md:text-3xl"><svg stroke="currentColor" fill="none"
+                                        stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round"
+                                        stroke-linejoin="round" height="1em" width="1em"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+                                        </path>
+                                        <rect x="2" y="9" width="4" height="12"></rect>
+                                        <circle cx="4" cy="4" r="2"></circle>
+                                    </svg></i></a><a href="https://www.instagram.com/ni_knc/" target="__blank"
+                                class="text-gray-400 cursor-pointer rounded-lg bg-tertiary shadow-sm p-4 duration-300 hover:bg-gray-100 hover:text-pink-500"><i
+                                    class="text-xl sm:text-2xl md:text-3xl"><svg stroke="currentColor" fill="none"
+                                        stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round"
+                                        stroke-linejoin="round" height="1em" width="1em"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                                    </svg></i></a><a href="https://www.youtube.com/@clementtech250" target="__blank"
+                                class="text-gray-400 cursor-pointer rounded-lg bg-tertiary shadow-sm p-4 duration-300 hover:bg-gray-100 hover:text-red-500"><i
+                                    class="text-xl sm:text-2xl md:text-3xl"><svg stroke="currentColor" fill="none"
+                                        stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round"
+                                        stroke-linejoin="round" height="1em" width="1em"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z">
+                                        </path>
+                                        <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+                                    </svg></i></a><a href="https://wa.me/+250799336379" target="__blank"
+                                class="text-gray-400 cursor-pointer rounded-lg bg-tertiary shadow-sm p-4 duration-300 hover:bg-gray-100 hover:text-green-500"><i
+                                    class="text-xl sm:text-2xl md:text-3xl"><svg stroke="currentColor"
+                                        fill="currentColor" stroke-width="0" viewBox="0 0 448 512" height="1em"
+                                        width="1em" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z">
+                                        </path>
+                                    </svg></i></a><a href="#"
+                                target="__blank"
+                                class="text-gray-400 cursor-pointer rounded-lg bg-tertiary shadow-sm p-4 duration-300 hover:bg-gray-100 hover:text-blue-600"><i
+                                    class="text-xl sm:text-2xl md:text-3xl"><svg stroke="currentColor" fill="none"
+                                        stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round"
+                                        stroke-linejoin="round" height="1em" width="1em"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z">
+                                        </path>
+                                    </svg></i></a><a href="mailto:programmerclement@gmail.com" target="__blank"
+                                class="text-gray-400 cursor-pointer rounded-lg bg-tertiary shadow-sm p-4 duration-300 hover:bg-gray-100 hover:text-gray-600"><i
+                                    class="text-xl sm:text-2xl md:text-3xl"><svg stroke="currentColor"
+                                        fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1em"
+                                        width="1em" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z">
+                                        </path>
+                                    </svg></i></a><a href="https://tiktok.com/ni_knc" target="__blank"
+                                class="text-gray-400 cursor-pointer rounded-lg bg-tertiary shadow-sm p-4 duration-300 hover:bg-gray-100 hover:text-black"><i
+                                    class="text-xl sm:text-2xl md:text-3xl"><svg stroke="currentColor"
+                                        fill="currentColor" stroke-width="0" viewBox="0 0 448 512" height="1em"
+                                        width="1em" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M448,209.91a210.06,210.06,0,0,1-122.77-39.25V349.38A162.55,162.55,0,1,1,185,188.31V278.2a74.62,74.62,0,1,0,52.23,71.18V0l88,0a121.18,121.18,0,0,0,1.86,22.17h0A122.18,122.18,0,0,0,381,102.39a121.43,121.43,0,0,0,67,20.14Z">
+                                        </path>
+                                    </svg></i></a>
+
+                                    <!-- <a
+                                href="https://play.google.com/store/apps/dev?id=7881383766588193746" target="__blank"
+                                class="text-gray-400 cursor-pointer rounded-lg bg-tertiary shadow-sm p-4 duration-300 hover:bg-gray-100 hover:text-green-500"><i
+                                    class="text-xl sm:text-2xl md:text-3xl"><svg stroke="currentColor"
+                                        fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1em"
+                                        width="1em" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.1c18-14.3 18-46.5-1.2-60.8zM104.6 499l280.8-161.2-60.1-60.1L104.6 499z">
+                                        </path>
+                                    </svg></i></a> -->
+                                    
+                                    
+                                    <a href="https://t.me/programmerclement" target="__blank"
+                                class="text-gray-400 cursor-pointer rounded-lg bg-tertiary shadow-sm p-4 duration-300 hover:bg-gray-100 hover:text-blue-400"><i
+                                    class="text-xl sm:text-2xl md:text-3xl"><svg stroke="currentColor"
+                                        fill="currentColor" stroke-width="0" viewBox="0 0 496 512" height="1em"
+                                        width="1em" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm121.8 169.9l-40.7 191.8c-3 13.6-11.1 16.9-22.4 10.5l-62-45.7-29.9 28.8c-3.3 3.3-6.1 6.1-12.5 6.1l4.4-63.1 114.9-103.8c5-4.4-1.1-6.9-7.7-2.5l-142 89.4-61.2-19.1c-13.3-4.2-13.6-13.3 2.8-19.7l239.1-92.2c11.1-4 20.8 2.7 17.2 19.5z">
+                                        </path>
+                                    </svg></i></a><a
+                                href="https://www.snapchat.com/add/datch1502?share_id=NZq-VlCB6p4&amp;locale=en-US"
+                                target="__blank"
+                                class="text-gray-400 cursor-pointer rounded-lg bg-tertiary shadow-sm p-4 duration-300 hover:bg-gray-100 hover:text-yellow-400"><i
+                                    class="text-xl sm:text-2xl md:text-3xl"><svg stroke="currentColor"
+                                        fill="currentColor" stroke-width="0" viewBox="0 0 496 512" height="1em"
+                                        width="1em" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm169.5 338.9c-3.5 8.1-18.1 14-44.8 18.2-1.4 1.9-2.5 9.8-4.3 15.9-1.1 3.7-3.7 5.9-8.1 5.9h-.2c-6.2 0-12.8-2.9-25.8-2.9-17.6 0-23.7 4-37.4 13.7-14.5 10.3-28.4 19.1-49.2 18.2-21 1.6-38.6-11.2-48.5-18.2-13.8-9.7-19.8-13.7-37.4-13.7-12.5 0-20.4 3.1-25.8 3.1-5.4 0-7.5-3.3-8.3-6-1.8-6.1-2.9-14.1-4.3-16-13.8-2.1-44.8-7.5-45.5-21.4-.2-3.6 2.3-6.8 5.9-7.4 46.3-7.6 67.1-55.1 68-57.1 0-.1.1-.2.2-.3 2.5-5 3-9.2 1.6-12.5-3.4-7.9-17.9-10.7-24-13.2-15.8-6.2-18-13.4-17-18.3 1.6-8.5 14.4-13.8 21.9-10.3 5.9 2.8 11.2 4.2 15.7 4.2 3.3 0 5.5-.8 6.6-1.4-1.4-23.9-4.7-58 3.8-77.1C183.1 100 230.7 96 244.7 96c.6 0 6.1-.1 6.7-.1 34.7 0 68 17.8 84.3 54.3 8.5 19.1 5.2 53.1 3.8 77.1 1.1.6 2.9 1.3 5.7 1.4 4.3-.2 9.2-1.6 14.7-4.2 4-1.9 9.6-1.6 13.6 0 6.3 2.3 10.3 6.8 10.4 11.9.1 6.5-5.7 12.1-17.2 16.6-1.4.6-3.1 1.1-4.9 1.7-6.5 2.1-16.4 5.2-19 11.5-1.4 3.3-.8 7.5 1.6 12.5.1.1.1.2.2.3.9 2 21.7 49.5 68 57.1 4 1 7.1 5.5 4.9 10.8z">
+                                        </path>
+                                    </svg></i></a><a href="Tel:+250799336379" target="__blank"
+                                class="text-gray-400 cursor-pointer rounded-lg bg-tertiary shadow-sm p-4 duration-300 hover:bg-gray-100 hover:text-gray-600"><i
+                                    class="text-xl sm:text-2xl md:text-3xl"><svg stroke="currentColor"
+                                        fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1em"
+                                        width="1em" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M493.4 24.6l-104-24c-11.3-2.6-22.9 3.3-27.5 13.9l-48 112c-4.2 9.8-1.4 21.3 6.9 28l60.6 49.6c-36 76.7-98.9 140.5-177.2 177.2l-49.6-60.6c-6.8-8.3-18.2-11.1-28-6.9l-112 48C3.9 366.5-2 378.1.6 389.4l24 104C27.1 504.2 36.7 512 48 512c256.1 0 464-207.5 464-464 0-11.2-7.7-20.9-18.6-23.4z">
+                                        </path>
+                                    </svg></i></a></ul>
+                        <p class="text-bold text-white mt-8 mb-4"><span class="text-gray-500">©2024</span> <span
+                                class="text-slate-200"> Programmer Clement</span></p>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <div class="Toastify"></div>
+    </div>
+
+
+
+</body>
+
+</html>
