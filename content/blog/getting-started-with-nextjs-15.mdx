@@ -1,0 +1,154 @@
+---
+title: "Getting Started with Next.js 15: What's New and Why It Matters"
+excerpt: "Next.js 15 brings exciting improvements including Partial Prerendering, enhanced Server Actions, and more. Here's a practical guide to get you started today."
+date: "2024-11-10"
+category: "Frontend"
+tags: ["Next.js", "React", "JavaScript", "Web Dev"]
+coverImage: "/blog/nextjs.jpg"
+featured: true
+---
+
+# Getting Started with Next.js 15
+
+Next.js 15 is here, and it brings a wave of improvements that make building production-ready React applications even better. In this guide, I'll walk you through what's new and how to get started.
+
+## What's New in Next.js 15
+
+### 1. Partial Prerendering (Stable)
+
+Partial Prerendering (PPR) is one of the most exciting features, now stable in Next.js 15. It allows you to mix static and dynamic content in the same route:
+
+```tsx
+import { Suspense } from 'react'
+import { StaticContent } from './StaticContent'
+import { DynamicContent } from './DynamicContent'
+
+export default function Page() {
+  return (
+    <>
+      <StaticContent />
+      <Suspense fallback={<Loading />}>
+        <DynamicContent />
+      </Suspense>
+    </>
+  )
+}
+```
+
+The static shell is served instantly from the CDN, while dynamic parts stream in. This gives you the best of both worlds.
+
+### 2. Enhanced Server Actions
+
+Server Actions are now more powerful and stable. You can use them for form submissions, data mutations, and more:
+
+```tsx
+async function submitForm(formData: FormData) {
+  'use server'
+  
+  const name = formData.get('name') as string
+  const email = formData.get('email') as string
+  
+  await saveToDatabase({ name, email })
+  revalidatePath('/')
+}
+
+export default function ContactForm() {
+  return (
+    <form action={submitForm}>
+      <input name="name" type="text" required />
+      <input name="email" type="email" required />
+      <button type="submit">Submit</button>
+    </form>
+  )
+}
+```
+
+### 3. React 19 Support
+
+Next.js 15 fully supports React 19, which includes:
+- **`use()` hook** — Read resources like Promises directly in render
+- **Improved transitions** — Better `useTransition` handling
+- **Document metadata** — Native `<title>`, `<meta>`, and `<link>` in components
+
+### 4. Turbopack (Default for `next dev`)
+
+Turbopack is now the default bundler for development, offering:
+- Up to 76.7% faster local server startup
+- Up to 96.3% faster code updates with Fast Refresh
+
+## Setting Up a New Project
+
+```bash
+npx create-next-app@latest my-portfolio \
+  --typescript \
+  --tailwind \
+  --app \
+  --src-dir=false
+```
+
+## Recommended Project Structure
+
+```
+my-app/
+├── app/
+│   ├── layout.tsx        # Root layout
+│   ├── page.tsx          # Home page
+│   ├── about/
+│   │   └── page.tsx
+│   └── blog/
+│       ├── page.tsx
+│       └── [slug]/
+│           └── page.tsx
+├── components/
+│   ├── ui/              # Reusable UI components
+│   └── sections/        # Page sections
+├── lib/
+│   └── utils.ts
+└── public/
+```
+
+## Key Concepts
+
+### Server vs Client Components
+
+By default, all components in the `app` directory are **Server Components**. Use `"use client"` at the top of a file to make it a Client Component:
+
+```tsx
+// Server Component (default) - runs on server
+export default async function ServerPage() {
+  const data = await fetchData() // Direct DB access OK
+  return <div>{data.title}</div>
+}
+
+// Client Component - runs on browser
+"use client"
+import { useState } from 'react'
+
+export function ClientButton() {
+  const [count, setCount] = useState(0)
+  return <button onClick={() => setCount(c => c + 1)}>{count}</button>
+}
+```
+
+### Data Fetching
+
+Next.js 15 makes data fetching straightforward:
+
+```tsx
+// Cached fetch (default)
+const data = await fetch('/api/posts', { cache: 'force-cache' })
+
+// No cache - always fresh
+const data = await fetch('/api/posts', { cache: 'no-store' })
+
+// Revalidate every hour
+const data = await fetch('/api/posts', { next: { revalidate: 3600 } })
+```
+
+## Conclusion
+
+Next.js 15 is a major step forward for the React ecosystem. With stable PPR, improved Server Actions, and React 19 support, it's never been easier to build fast, scalable web applications.
+
+If you're starting a new project today, I'd strongly recommend Next.js 15 as your foundation. The developer experience improvements alone make the upgrade worthwhile.
+
+Happy coding! 🚀

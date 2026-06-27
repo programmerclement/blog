@@ -1,0 +1,274 @@
+---
+title: "Building Modern REST APIs with Node.js and Express"
+excerpt: "A comprehensive guide to designing and building scalable REST APIs using Node.js, Express, and TypeScript — covering authentication, validation, and best practices."
+date: "2024-06-15"
+category: "Backend"
+tags: ["Node.js", "Express", "API", "TypeScript", "Backend"]
+coverImage: "/blog/nodejs-api.jpg"
+featured: true
+---
+
+# Building Modern REST APIs with Node.js and Express
+
+REST APIs are the backbone of modern web applications. In this guide, I'll show you how to build a production-ready API using Node.js, Express, and TypeScript — incorporating all the best practices I've learned over my years of backend development.
+
+## Project Setup
+
+First, initialize your project with TypeScript:
+
+```bash
+mkdir my-api && cd my-api
+npm init -y
+npm install express cors helmet morgan bcryptjs jsonwebtoken zod
+npm install -D typescript @types/node @types/express @types/cors ts-node nodemon
+```
+
+Create a `tsconfig.json`:
+
+```json
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "commonjs",
+    "strict": true,
+    "esModuleInterop": true,
+    "outDir": "./dist",
+    "rootDir": "./src"
+  }
+}
+```
+
+## Project Structure
+
+```
+src/
+├── app.ts              # Express app setup
+├── server.ts           # HTTP server entry point
+├── config/
+│   └── database.ts
+├── middleware/
+│   ├── auth.ts
+│   ├── errorHandler.ts
+│   └── validate.ts
+├── modules/
+│   └── users/
+│       ├── user.routes.ts
+│       ├── user.controller.ts
+│       ├── user.service.ts
+│       └── user.schema.ts
+└── utils/
+    └── ApiResponse.ts
+```
+
+## Setting Up Express
+
+```typescript
+// src/app.ts
+import express from 'express'
+import cors from 'cors'
+import helmet from 'helmet'
+import morgan from 'morgan'
+
+const app = express()
+
+// Security middleware
+app.use(helmet())
+app.use(cors({
+  origin: process.env.CLIENT_URL,
+  credentials: true
+}))
+app.use(morgan('dev'))
+app.use(express.json({ limit: '10mb' }))
+
+// Routes
+app.use('/api/v1/users', userRoutes)
+app.use('/api/v1/auth', authRoutes)
+
+// 404 handler
+app.use((req, res) => {
+  res.status(404).json({ success: false, message: 'Route not found' })
+})
+
+// Error handler
+app.use(errorHandler)
+
+export default app
+```
+
+## Input Validation with Zod
+
+Always validate your inputs. I use Zod for type-safe validation:
+
+```typescript
+// src/modules/users/user.schema.ts
+import { z } from 'zod'
+
+export const createUserSchema = z.object({
+  body: z.object({
+    name: z.string().min(2).max(100),
+    email: z.string().email(),
+    password: z.string().min(8).regex(
+      /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)/,
+      'Password must contain uppercase, lowercase, and number'
+    )
+  })
+})
+
+export type CreateUserInput = z.infer<typeof createUserSchema>['body']
+```
+
+## JWT Authentication Middleware
+
+```typescript
+// src/middleware/auth.ts
+import { Request, Response, NextFunction } from 'express'
+import jwt from 'jsonwebtoken'
+
+interface JwtPayload {
+  userId: string
+  email: string
+}
+
+export function authenticate(req: Request, res: Response, next: NextFunction) {
+  const token = req.headers.authorization?.split(' ')[1]
+  
+  if (!token) {
+    return res.status(401).json({ success: false, message: 'No token provided' })
+  }
+  
+  try {
+    const decoded = jwt.verify(token, process.env.JWT_SECRET!) as JwtPayload
+    req.user = decoded
+    next()
+  } catch (error) {
+    return res.status(401).json({ success: false, message: 'Invalid token' })
+  }
+}
+```
+
+## Controller Pattern
+
+```typescript
+// src/modules/users/user.controller.ts
+import { Request, Response, NextFunction } from 'express'
+import { UserService } from './user.service'
+import { ApiResponse } from '@/utils/ApiResponse'
+
+export class UserController {
+  constructor(private userService: UserService) {}
+
+  getAll = async (req: Request, res: Response, next: NextFunction) => {
+    try {
+      const { page = 1, limit = 10 } = req.query
+      const { users, total } = await this.userService.findAll({
+        page: Number(page),
+        limit: Number(limit)
+      })
+      
+      res.json(new ApiResponse(200, { users, total }, 'Users fetched successfully'))
+    } catch (error) {
+      next(error)
+    }
+  }
+
+  create = async (req: Request, res: Response, next: NextFunction) => {
+    try {
+      const user = await this.userService.create(req.body)
+      res.status(201).json(new ApiResponse(201, user, 'User created successfully'))
+    } catch (error) {
+      next(error)
+    }
+  }
+}
+```
+
+## Consistent API Response Format
+
+Always return consistent responses:
+
+```typescript
+// src/utils/ApiResponse.ts
+export class ApiResponse<T> {
+  public success: boolean
+  
+  constructor(
+    public statusCode: number,
+    public data: T,
+    public message: string = 'Success'
+  ) {
+    this.success = statusCode < 400
+  }
+}
+
+// Usage:
+// { "success": true, "statusCode": 200, "data": {...}, "message": "Users fetched" }
+```
+
+## Error Handling
+
+```typescript
+// src/middleware/errorHandler.ts
+import { Request, Response, NextFunction } from 'express'
+
+export class AppError extends Error {
+  constructor(public statusCode: number, message: string) {
+    super(message)
+    this.name = 'AppError'
+  }
+}
+
+export function errorHandler(
+  err: Error,
+  req: Request,
+  res: Response,
+  next: NextFunction
+) {
+  if (err instanceof AppError) {
+    return res.status(err.statusCode).json({
+      success: false,
+      message: err.message
+    })
+  }
+  
+  console.error('Unhandled error:', err)
+  res.status(500).json({
+    success: false,
+    message: 'Internal server error'
+  })
+}
+```
+
+## Security Best Practices
+
+1. **Always use HTTPS** in production
+2. **Rate limiting** to prevent abuse:
+
+```typescript
+import rateLimit from 'express-rate-limit'
+
+export const apiLimiter = rateLimit({
+  windowMs: 15 * 60 * 1000, // 15 minutes
+  max: 100,
+  message: { success: false, message: 'Too many requests' }
+})
+
+app.use('/api/', apiLimiter)
+```
+
+3. **Sanitize inputs** to prevent injection attacks
+4. **Never expose sensitive data** in responses (remove passwords, tokens)
+5. **Use environment variables** for all secrets
+
+## Conclusion
+
+Building a REST API the right way takes planning. The patterns covered here — validation with Zod, JWT auth, consistent responses, and proper error handling — are battle-tested and used in production at scale.
+
+The key takeaways:
+- Validate all inputs with a schema
+- Use middleware for cross-cutting concerns
+- Return consistent API responses
+- Never skip error handling
+
+In a future post, I'll cover how to add database integration with PostgreSQL using Prisma, and how to write integration tests for your API.
+
+Stay curious and keep building! 🛠️
