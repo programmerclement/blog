@@ -33,6 +33,9 @@
     "tailwind-merge": "^2.5.4",
     "unified": "^11.0.5"
   },
+  "overrides": {
+    "js-yaml": "4.2.0"
+  },
   "devDependencies": {
     "@netlify/plugin-nextjs": "^5.15.12",
     "@types/node": "^20.17.6",
