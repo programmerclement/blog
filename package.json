@@ -34,7 +34,12 @@
     "unified": "^11.0.5"
   },
   "overrides": {
-    "js-yaml": "4.2.0"
+    "eslint": {
+      "js-yaml": "4.2.0"
+    },
+    "@eslint/eslintrc": {
+      "js-yaml": "4.2.0"
+    }
   },
   "devDependencies": {
     "@netlify/plugin-nextjs": "^5.15.12",
